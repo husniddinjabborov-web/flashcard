@@ -8,7 +8,7 @@ function Header({ topicView, cardView, topics, topic, getCompletedCardsCount, ge
         <nav className="topicsNav">
           <ul>
             <div className="topicsNavLeft">
-              <li><Link to="/"><img src={flashcardlogo} alt="flashcardlogo" width={50} height={50}/></Link></li>
+              <li><Link to="/">Flashcard</Link></li>
             </div>
             <div className="topicsNavRight">
               <li><Link to="/faq">FAQ</Link></li>
@@ -39,7 +39,7 @@ function Header({ topicView, cardView, topics, topic, getCompletedCardsCount, ge
         <nav className="cardsNav">
           <ul>
             <div className="cardsNavLeft">
-            <li><a href="./"><img src={flashcardlogo} alt="flashcardlogo" width={50} height={50}/></a></li>
+            <li><a href="./">Flashcard</a></li>
             </div>
             <div className="cardsNavRight">
               <li><Link to="/faq">FAQ</Link></li>

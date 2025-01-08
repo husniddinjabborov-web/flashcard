@@ -349,6 +349,7 @@ main .cardSection .cardWrapper .cardContainer .newCard {
     justify-content: center;
     align-items: center;
     height: 336px;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
