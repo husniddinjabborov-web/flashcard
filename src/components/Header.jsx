@@ -39,7 +39,7 @@ function Header({ topicView, cardView, topics, topic, getCompletedCardsCount, ge
         <nav className="cardsNav">
           <ul>
             <div className="cardsNavLeft">
-            <li><Link to="/"><img src={flashcardlogo} alt="flashcardlogo" width={50} height={50}/></Link></li>
+            <li><a href="./"><img src={flashcardlogo} alt="flashcardlogo" width={50} height={50}/></a></li>
             </div>
             <div className="cardsNavRight">
               <li><Link to="/faq">FAQ</Link></li>
