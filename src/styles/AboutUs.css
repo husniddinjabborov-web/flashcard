@@ -1,0 +1,64 @@
+.about-us {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.about-us h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-us address {
+    font-style: normal;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.about-us address p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.about-us address p:first-child {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.about-us address p:last-child {
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .about-us {
+        padding: 15px;
+    }
+
+    .about-us h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-us p {
+        font-size: 1rem;
+    }
+
+    .about-us address p {
+        font-size: 0.9rem;
+    }
+}

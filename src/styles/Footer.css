@@ -1,0 +1,89 @@
+footer .topicButton,
+footer .cardButton {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+footer .topicButton:hover,
+footer .cardButton:hover {
+    background-color: #45a049;
+    transform: translateX(-50%) scale(1.1);
+}
+
+footer form {
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    transition: opacity 0.3s ease;
+}
+
+
+footer form input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+footer form input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+footer form .formButtons {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+footer form .formButtons button:first-child {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+footer form .formButtons button:last-child {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+
+
+@media (max-width: 480px) {
+    footer form {
+        width: 300px;
+    }
+
+}

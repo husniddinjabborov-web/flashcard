@@ -1,0 +1,365 @@
+main .topicSection {
+    margin: 20px;
+}
+
+main .topicSection h2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5em;
+}
+
+main .topicSection .topicContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+main .topicSection .topicContainer .topicItem {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+main .topicSection .topicContainer .topicItem span {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #e0f7fa;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+main .topicSection .topicContainer .topicItem span:hover {
+    background-color: #b2ebf2;
+}
+
+main .topicSection .topicContainer .topicItem .topicButtons {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: none;
+}
+
+main .topicSection .topicContainer .topicItem:hover .topicButtons {
+    display: flex;
+    gap: 5px;
+}
+
+main .topicSection .topicContainer .topicItem .topicButtons button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+main .topicSection .topicContainer .topicItem .topicButtons button:hover {
+    background-color: #0056b3;
+}
+
+main .topicSection .topicContainer .topicItem form {
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    transition: opacity 0.3s ease;
+    z-index: 999999999999999;
+}
+
+main .topicSection .topicContainer .topicItem form input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+main .topicSection .topicContainer .topicItem form input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+main .topicSection .topicContainer .topicItem form .topicEditButtons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+main .topicSection .topicContainer .topicItem form .topicEditButtons button:first-child {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+main .topicSection .topicContainer .topicItem form .topicEditButtons button:last-child {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+
+
+main .cardSection {
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+main .cardSection h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+main .cardSection .cardWrapper {
+    display: grid;
+    gap: 25px;
+    padding: 10px;
+}
+
+
+@media (max-width: 600px) {
+    main .cardSection .cardWrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    main .cardSection .cardWrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 1025px) {
+    main .cardSection .cardWrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+main .cardSection .cardWrapper .cardContainer {
+    perspective: 1000px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+main .cardSection .cardWrapper .cardContainer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+main .cardSection .cardWrapper .cardContainer .card {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+main .cardSection .cardWrapper .cardContainer.flipped .card {
+    transform: rotateY(180deg);
+}
+
+main .cardSection .cardWrapper .cardContainer .card .front,
+main .cardSection .cardWrapper .cardContainer .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 16px;
+}
+
+main .cardSection .cardWrapper .cardContainer .card .front {
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    color: #333;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main .cardSection .cardWrapper .cardContainer .card .back {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    color: #333;
+    transform: rotateY(180deg);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main .cardSection .cardWrapper .cardContainer .card .back .backButtons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+main .cardSection .cardWrapper .cardContainer .card .back .backButtons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #ff6f61;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+main .cardSection .cardWrapper .cardContainer .card .back .backButtons button:hover {
+    background-color: #ff3b2f;
+    transform: scale(1.1);
+}
+
+main .cardSection .cardWrapper .cardContainer .cardActions {
+    margin: 10px;
+    text-align: center;
+}
+
+main .cardSection .cardWrapper .cardContainer .cardActions button:first-child {
+    padding: 10px 16px;
+    border: none;
+    margin-right: 5px;
+    border-radius: 12px;
+    background-color: #4caf50;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+main .cardSection .cardWrapper .cardContainer .cardActions button:last-child {
+    padding: 10px 16px;
+    border: none;
+    margin-left: 5px;
+    border-radius: 12px;
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+main .cardSection .cardWrapper .cardContainer .cardActions button:hover {
+    transform: scale(1.1);
+}
+
+main .cardSection .cardWrapper .cardContainer .cardActions form {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    transition: opacity 0.3s ease;
+}
+
+main .cardSection .cardWrapper .cardContainer .cardActions form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 150px;
+    margin-bottom: 5px;
+}
+main .cardSection .cardWrapper .cardContainer .cardActions form input:first-child {
+    margin-right: 5px;
+}
+main .cardSection .cardWrapper .cardContainer .cardActions form input:last-child {
+    margin-left: 5px;
+}
+
+main .cardSection .cardWrapper .cardContainer .cardActions form input:focus {
+    outline: none;
+}
+
+main .cardSection .cardWrapper .cardContainer .cardActions form .cardEditButtons {
+    margin-bottom: 100px;
+}
+main .cardSection .cardWrapper .cardContainer .cardActions form .cardEditButtons button:first-child {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+main .cardSection .cardWrapper .cardContainer .cardActions form .cardEditButtons button:last-child {
+    background-color: gray;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} 
+
+
+main .cardSection .cardWrapper .cardContainer .newCard {
+    background-color: #eceff1;
+    font-size: 1.5em;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 336px;
+}
+
+@media (max-width: 768px) {
+    main .topicSection .topicContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+
+    main .topicSection .topicContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
